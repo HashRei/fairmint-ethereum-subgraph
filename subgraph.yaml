@@ -8,37 +8,1485 @@ dataSources:
     source:
       address: "0x3983C6DA8235F59e16a034EE773e60A69e8F14B2"
       abi: CafeContract
+      startBlock: 9479972
     mapping:
       kind: ethereum/events
-      apiVersion: 0.0.7
+      apiVersion: 0.0.6
       language: wasm/assemblyscript
       entities:
-        - Approval
-        - Burn
-        - Buy
-        - Close
-        - Sell
-        - StateChange
-        - Transfer
-        - UpdateConfig
+        - Organization
+        - User
       abis:
         - name: CafeContract
           file: ./abis/CafeContract.json
       eventHandlers:
-        - event: Approval(indexed address,indexed address,uint256)
-          handler: handleApproval
-        - event: Burn(indexed address,uint256)
-          handler: handleBurn
         - event: Buy(indexed address,indexed address,uint256,uint256)
           handler: handleBuy
-        - event: Close()
-          handler: handleClose
-        - event: Sell(indexed address,indexed address,uint256,uint256)
-          handler: handleSell
-        - event: StateChange(uint256,uint256)
-          handler: handleStateChange
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
         - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
           handler: handleUpdateConfig
-      file: ./src/cafe-contract.ts
+      file: ./src/index.ts
+  - kind: ethereum
+    name: ErxesCafeContract
+    network: mainnet
+    source:
+      address: "0x5E60e9fB8238356dE55EB2342CdeC298eB43633e"
+      abi: CafeContract
+      startBlock: 11344889
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: OpenGrantsCafeContract
+    network: mainnet
+    source:
+      address: "0x2533FfAfC1DAb5caF4a0A398C4A68f43A68C40D9"
+      abi: CafeContract
+      startBlock: 11563574
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: GildedCafeContract
+    network: mainnet
+    source:
+      address: "0x86698EfEB4383b4D190F51814A11Ae1d406A7fEe"
+      abi: CafeContract
+      startBlock: 11517632
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: GreenruhmCafeContract
+    network: mainnet
+    source:
+      address: "0x85F0E7F73D25D2F67144355fae30E79F8A443eBd"
+      abi: CafeContract
+      startBlock: 11962157
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: BeemCafeContract
+    network: mainnet
+    source:
+      address: "0x79ebbcdB8cF68E98Cacfa252A9270cFa8dD3a579"
+      abi: CafeContract
+      startBlock: 12366065
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: EndowlCafeContract
+    network: mainnet
+    source:
+      address: "0xea60ce9C7Dd97A639f055a5d48D01478BF6E48Bc"
+      abi: CafeContract
+      startBlock: 12469320
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: GlozalCafeContract
+    network: mainnet
+    source:
+      address: "0xB9c5301cdBE53A8d48eE08cE1A4d0Cb3C9dbAFC8"
+      abi: CafeContract
+      startBlock: 12524222
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: SalesTechExpoCafeContract
+    network: mainnet
+    source:
+      address: "0x9Db8bADd8779F9d8396467653AFcac63CFb198A9"
+      abi: CafeContract
+      startBlock: 12505824
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: WhatscookinCafeContract
+    network: mainnet
+    source:
+      address: "0x40557855dE199e80ef5f3A1A5cC1Eb53c131A270"
+      abi: CafeContract
+      startBlock: 12570448
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: BlockscienceCafeContract
+    network: mainnet
+    source:
+      address: "0xb4497dF534237F442bAE129027b5A6C00f7510D9"
+      abi: CafeContract
+      startBlock: 12915399
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: HospitableCafeContract
+    network: mainnet
+    source:
+      address: "0x5f0A5C75B7d0E88251fC08096570d4C06b48d89B"
+      abi: CafeContract
+      startBlock: 12917060
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: MrBlockCafeContract
+    network: mainnet
+    source:
+      address: "0x6Ab5329F7e8F8BDb469A7E5C97F72F89Cc4de1Bd"
+      abi: CafeContract
+      startBlock: 12602766
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: CohereCafeContract
+    network: mainnet
+    source:
+      address: "0x5A363C20354E80D97CA51f34DfF3B882423b9B7d"
+      abi: CafeContract
+      startBlock: 13173618
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: SalesfolksCafeContract
+    network: mainnet
+    source:
+      address: "0xb2132FabcEf63a5258e515a59dEE69BFc3116455"
+      abi: CafeContract
+      startBlock: 13605225
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: PhosphorCafeContract
+    network: mainnet
+    source:
+      address: "0x5EfB88659B16967952Beb5C3b3301F9FB7A84DBB"
+      abi: CafeContract
+      startBlock: 13719146
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: GridlockCafeContract
+    network: mainnet
+    source:
+      address: "0x764239CEbB19ACC6ABF8411516371348Bdfe1cAe"
+      abi: CafeContract
+      startBlock: 13761546
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: IndieverseCafeContract
+    network: mainnet
+    source:
+      address: "0x08e9D6418DCFF0EE675aB537AdA4d16fe2034034"
+      abi: CafeContract
+      startBlock: 13811681
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: EkchatCafeContract
+    network: mainnet
+    source:
+      address: "0x79CA8329B642Defa895F1C5e68E14dB8CEb4F1ac"
+      abi: CafeContract
+      startBlock: 13820090
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: TamarinCafeContract
+    network: mainnet
+    source:
+      address: "0x30378e69E40D2A57F2D99D8883e857e895C90F95"
+      abi: CafeContract
+      startBlock: 13849957
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: BuildCitiesCafeContract
+    network: mainnet
+    source:
+      address: "0xE41367D4Ac1677009d5112CA3FA760eB2B572019"
+      abi: CafeContract
+      startBlock: 14232004
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: CorlCafeContract
+    network: mainnet
+    source:
+      address: "0x6c7CEA0416Dfd6De4cF9b7B72fD3896379fC3e42"
+      abi: CafeContract
+      startBlock: 14278077
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: ValidideCafeContract
+    network: mainnet
+    source:
+      address: "0x29C6208c2e9D46d8a91482B56055A31fedD2e9dC"
+      abi: CafeContract
+      startBlock: 14218869
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: SnowballCafeContract
+    network: mainnet
+    source:
+      address: "0x0Cf5f63fF033E2791a8f8b1e8EC110E2C6397791"
+      abi: CafeContract
+      startBlock: 14232461
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: TrashlessCafeContract
+    network: mainnet
+    source:
+      address: "0xb17fba6e0A1dA1B5521458A2b90F3C2059e0D931"
+      abi: CafeContract
+      startBlock: 14310144
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: ReapCafeContract
+    network: mainnet
+    source:
+      address: "0xF7533f1c31d9a20976340c05b140c35362FA1045"
+      abi: CafeContract
+      startBlock: 14232461
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: WinechainCafeContract
+    network: mainnet
+    source:
+      address: "0x4129E340409D37B66673ce961559e28c73fafc22"
+      abi: CafeContract
+      startBlock: 14624009
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: PlatoCafeContract
+    network: mainnet
+    source:
+      address: "0xdEF8a9552177A66b3DC1874fb4977F97741F4d9D"
+      abi: CafeContract
+      startBlock: 14638068
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: KapedCafeContract
+    network: mainnet
+    source:
+      address: "0x508b3Fbc7bad5BE0BA822E558FC5B081366B78e9"
+      abi: CafeContract
+      startBlock: 14831704
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: AwesomeCafeContract
+    network: mainnet
+    source:
+      address: "0xdA9d8568A7420256a30f736b01c300657ffF85E1"
+      abi: CafeContract
+      startBlock: 15390247
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: BoxlyappCafeContract
+    network: mainnet
+    source:
+      address: "0xB65c16C26479512B6263753475199402833c1e5B"
+      abi: CafeContract
+      startBlock: 15441948
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - Organization
+        - User
+      abis:
+        - name: CafeContract
+          file: ./abis/CafeContract.json
+      eventHandlers:
+        - event: Buy(indexed address,indexed address,uint256,uint256)
+          handler: handleBuy
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+        - event: UpdateConfig(address,indexed address,indexed address,indexed address,uint256,uint256,uint256,uint256,uint256)
+          handler: handleUpdateConfig
+      file: ./src/index.ts
+  - kind: ethereum
+    name: WhitelistContract
+    network: mainnet
+    source:
+      address: "0x8ADBa8627679Cf33f7eF97fD89B1D67E48aFDEB5"
+      abi: WhitelistContract
+      startBlock: 9479972
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: ErxesWhitelistContract
+    network: mainnet
+    source:
+      address: "0x26110D9925C73D33d9C671EA824167D08A3856e5"
+      abi: WhitelistContract
+      startBlock: 11344900
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: OpenGrantsWhitelistContract
+    network: mainnet
+    source:
+      address: "0xffA472152b3d3F80cA6eF11cA9550F6db68Ab301"
+      abi: WhitelistContract
+      startBlock: 11563691
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: GildedWhitelistContract
+    network: mainnet
+    source:
+      address: "0x72dfb0A83ef86168093080AC9DEB52c622F7dE2e"
+      abi: WhitelistContract
+      startBlock: 11517645
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: GreenruhmWhitelistContract
+    network: mainnet
+    source:
+      address: "0x1Fe049B07cBe55b0667dbFA463967905840d7fC9"
+      abi: WhitelistContract
+      startBlock: 11962281
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: BeemWhitelistContract
+    network: mainnet
+    source:
+      address: "0x6241a77589F56Ba0eA6Cfc79bB0D130b8580F1aA"
+      abi: WhitelistContract
+      startBlock: 12683000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: EndowlWhitelistContract
+    network: mainnet
+    source:
+      address: "0xb2B5cadf6e267CAF5055cdf8578832F15D4FffDf"
+      abi: WhitelistContract
+      startBlock: 12469330
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: GlozalWhitelistContract
+    network: mainnet
+    source:
+      address: "0x64D6d1FeB2Fd355c9B9537966FEa2353907B9F2f"
+      abi: WhitelistContract
+      startBlock: 12524228
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: SalesTechExpoWhitelistContract
+    network: mainnet
+    source:
+      address: "0xeD60c010d120710DBB16Bb98A416B1b43c506291"
+      abi: WhitelistContract
+      startBlock: 12505840
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: WhatscookinWhitelistContract
+    network: mainnet
+    source:
+      address: "0x083ac2251f19684615C76FfFE146A224a176C2D5"
+      abi: WhitelistContract
+      startBlock: 12570452
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: BlockscienceWhitelistContract
+    network: mainnet
+    source:
+      address: "0x4bc86A6A29b40A124a5EDe2465B6511cE414116B"
+      abi: WhitelistContract
+      startBlock: 12915408
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: HospitableWhitelistContract
+    network: mainnet
+    source:
+      address: "0x6EE91b2B714ccAC6fe7587Cd99Ca78Cf363fc4eC"
+      abi: WhitelistContract
+      startBlock: 12917065
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: MrBlockWhitelistContract
+    network: mainnet
+    source:
+      address: "0x76192Ac0e7aFf5588bC8E9c1aa5D1b4DeB662a4D"
+      abi: WhitelistContract
+      startBlock: 12602862
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: CohereWhitelistContract
+    network: mainnet
+    source:
+      address: "0x65D8B9C8e2e49f62A632b00c3f89f03c7494F516"
+      abi: WhitelistContract
+      startBlock: 13173826
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: SalesfolksWhitelistContract
+    network: mainnet
+    source:
+      address: "0x5e5e8487BAAa3E64Bdf67c249a41D8545da094F7"
+      abi: WhitelistContract
+      startBlock: 13605435
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: PhosphorWhitelistContract
+    network: mainnet
+    source:
+      address: "0xb970cB048234cc124d26665aB33473Acbb3b6Dc1"
+      abi: WhitelistContract
+      startBlock: 13719199
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: GridlockWhitelistContract
+    network: mainnet
+    source:
+      address: "0x7A886a0B10E49FF1A7118C400EA7678F3Ff27831"
+      abi: WhitelistContract
+      startBlock: 13761580
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: IndieverseWhitelistContract
+    network: mainnet
+    source:
+      address: "0xFcceE4A03745CFB4c60026dd0dA2079aB5625B43"
+      abi: WhitelistContract
+      startBlock: 13811703
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: EkchatWhitelistContract
+    network: mainnet
+    source:
+      address: "0x6b945d29C2D87E898158d8f54365487a88D8B5Cc"
+      abi: WhitelistContract
+      startBlock: 13820394
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: TamarinWhitelistContract
+    network: mainnet
+    source:
+      address: "0x39E8583adD87F1f9547E5670fcEA0Ff0FEa82e14"
+      abi: WhitelistContract
+      startBlock: 13850087
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: BuildCitiesWhitelistContract
+    network: mainnet
+    source:
+      address: "0xc5aECB3e33bFbE632Cb4910E555EeD53dEC12C32"
+      abi: WhitelistContract
+      startBlock: 14232021
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: ValidideWhitelistContract
+    network: mainnet
+    source:
+      address: "0xd110EfFB207191C3E07807da4b5F74Bd6c9e061A"
+      abi: WhitelistContract
+      startBlock: 14218880
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: SnowballWhitelistContract
+    network: mainnet
+    source:
+      address: "0x0C495c084d8e65459AA1cDeaaCa76c280472E5CB"
+      abi: WhitelistContract
+      startBlock: 14232480
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: TrashlessWhitelistContract
+    network: mainnet
+    source:
+      address: "0xcd2E3c9908331C350573bBbF0C812E6a34cDfb48"
+      abi: WhitelistContract
+      startBlock: 14310155
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: ReapWhitelistContract
+    network: mainnet
+    source:
+      address: "0xe86A033949FEcd7b09BB1963eD1541290490B38A"
+      abi: WhitelistContract
+      startBlock: 14407613
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: WinechainWhitelistContract
+    network: mainnet
+    source:
+      address: "0x81B32eA9Eade650c0391E0586bc9256491E990F3"
+      abi: WhitelistContract
+      startBlock: 14624040
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: PlatoWhitelistContract
+    network: mainnet
+    source:
+      address: "0x666728238f776d256C8012C44528f5e78D4b4232"
+      abi: WhitelistContract
+      startBlock: 14638091
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: KapedWhitelistContract
+    network: mainnet
+    source:
+      address: "0x8dd037AAc9e7A79F1d823D3353cf875a9007A463"
+      abi: WhitelistContract
+      startBlock: 14831742
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: AwesomeWhitelistContract
+    network: mainnet
+    source:
+      address: "0x95a018a4d449650e325eFFf2281be21abCD3D3Ce"
+      abi: WhitelistContract
+      startBlock: 15390257
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: CorlWhitelistContract
+    network: mainnet
+    source:
+      address: "0x1af33B89121fb7f0EF4A85503486D4BAAFC96179"
+      abi: WhitelistContract
+      startBlock: 14278102
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts
+  - kind: ethereum
+    name: BoxlyappWhitelistContract
+    network: mainnet
+    source:
+      address: "0x0Ab0E8A23B313bC5273542235f4133d2f1fEE5E8"
+      abi: WhitelistContract
+      startBlock: 15441986
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      entities:
+        - User
+        - Organization
+      abis:
+        - name: WhitelistContract
+          file: ./abis/WhitelistContract.json
+      eventHandlers:
+        - event: AddLockup(indexed address,uint256,uint256,indexed address)
+          handler: handleAddLockup
+        - event: ApproveNewUser(indexed address,indexed uint256,indexed address)
+          handler: handleApproveNewUser
+      file: ./src/index.ts

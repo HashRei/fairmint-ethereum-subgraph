@@ -1,6 +1,102 @@
-type ExampleEntity @entity {
-  id: Bytes!
-  count: BigInt!
-  owner: Bytes! # address
-  spender: Bytes! # address
+type Organization @entity {
+  id: ID!
+
+  "Organization address"
+  address: Bytes!
+
+  "Organization name"
+  name: String!
+
+  "Initial fundraising goal"
+  initGoal: BigInt!
+
+  "Initial number of token created at initialization for the beneficiary"
+  initReserve: BigInt!
+
+  "Commitement that backs the value of CAFEs. This value can only be increased"
+  equityCommitment: BigInt!
+
+  "Fundraising amount that can be sold as a fixed price"
+  fundraisingGoal: BigInt!
+
+  "Total supply of tokens"
+  totalSupply: BigInt!
+
+  "Address of the beneficiary organization which receives the investments"
+  beneficiary: Bytes!
+
+  "Value of the numerator value of BuySlope"
+  buySlopeNum: BigInt!
+
+  "Value of the denumerator value of BuySlope"
+  buySlopeDen: BigInt!
+
+  "Maximum number of CAFEs that can be issued for stakeholders incentivization, expressed in percentage of the total number of CAFEs outstanding"
+  stakeholdersPoolIssued: BigInt!
+
+  "Current number of CAFEs that have been issued"
+  stakeholdersPoolAuthorized: BigInt!
+
+  "Total number of tokens that have been attributed to current shareholders"
+  shareholders: BigInt!
+
+  "The minimum amount of `currency` investment accepted"
+  minInvestment: BigInt!
+
+  "The current state of the contract"
+  state: BigInt!
+
+  "Current version of the contract"
+  version: String!
+
+  "The contract for transfer authorizations, if any"
+  whitelist: Bytes!
+
+  "The address from which the updatable variables can be updated"
+  control: Bytes!
+
+  "Token symbol"
+  symbol: String!
+
+  "Value for the decimals"
+  decimals: BigInt!
+
+  "Address of the token used as reserve in the bonding curve"
+  currency: Bytes!
+}
+
+type User @entity {
+  id: ID!
+  "User address"
+  address: Bytes!
+
+  "Amount of USDC spend to buy tokens"
+  invested: BigInt!
+
+  "Amount of tokens received"
+  received: BigInt!
+
+  "Organization name to which the User belongs"
+  organizationName: String!
+
+  "Organization address to which the User belongs"
+  organizationAddress: Bytes!
+
+  "Address of the whitelist contract of the organization to which the user belongs"
+  whitelistContractAddress: Bytes!
+
+  "Jurisdiction in which the user is situated"
+  jurisdictionId: BigInt!
+
+  "Total number of tokens locked for this user"
+  totalTokensLocked: BigInt!
+
+  "The first applicable entry in userIdLockups"
+  startIndex: BigInt!
+
+  "The last applicable entry in userIdLockups + 1"
+  endIndex: BigInt!
+
+  "Whitelisted subwallet - to which it is allowed to move tokens"
+  userId: Bytes!
 }

@@ -2,6 +2,9 @@
   "mainnet": {
     "CafeContract": {
       "address": "0x3983C6DA8235F59e16a034EE773e60A69e8F14B2"
+    },
+    "WhitelistContract": {
+      "address": "0x8ADBa8627679Cf33f7eF97fD89B1D67E48aFDEB5"
     }
   }
 }
